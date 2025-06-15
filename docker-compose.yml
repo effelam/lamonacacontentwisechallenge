@@ -1,0 +1,23 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "28017:28017"
+    command: ["mongod", "--port", "28017"]
+    volumes:
+      - ./data:/data
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+
+  springboot-app:
+    build: .
+    container_name: springboot-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:28017/contentwisedb
+
+volumes:
+  mongo_data:

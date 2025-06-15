@@ -1,0 +1,52 @@
+[
+    {
+        "movie_id": 1,
+        "title": "Toy Story",
+        "genres": ["Adventure", "Animation", "Children", "Comedy", "Fantasy"]
+    },
+    {
+        "movie_id": 2,
+        "title": "Grumpier Old Men",
+        "genres": ["Comedy", "Romance"]
+    },
+    {
+        "movie_id": 3,
+        "title": "Die Hard",
+        "genres": ["Action", "Thriller"]
+    },
+    {
+        "movie_id": 4,
+        "title": "Star Wars: Return of the Jedi",
+        "genres": ["Action", "Adventure", "Fantasy", "Sci-Fi"]
+    },
+    {
+        "movie_id": 5,
+        "title": "The Lion King",
+        "genres": ["Adventure", "Animation", "Children", "Drama", "Musical"]
+    },
+    {
+        "movie_id": 6,
+        "title": "Pulp Fiction",
+        "genres": ["Crime", "Drama", "Thriller"]
+    },
+    {
+        "movie_id": 7,
+        "title": "Forrest Gump",
+        "genres": ["Comedy", "Drama", "Romance"]
+    },
+    {
+        "movie_id": 8,
+        "title": "The Matrix",
+        "genres": ["Action", "Sci-Fi"]
+    },
+    {
+        "movie_id": 9,
+        "title": "Goodfellas",
+        "genres": ["Biography", "Crime", "Drama"]
+    },
+    {
+        "movie_id": 10,
+        "title": "Jurassic Park",
+        "genres": ["Adventure", "Sci-Fi", "Thriller"]
+    }
+]
