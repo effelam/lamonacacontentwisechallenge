@@ -10,7 +10,9 @@ services:
       - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
 
   springboot-app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: springboot-app
     ports:
       - "8080:8080"
