@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "d81915f4-1012-49e1-9279-b9b241b22eef",
+		"name": "Contentwise challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11723104"
+	},
+	"item": [
+		{
+			"name": "AddRating",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 5,\r\n    \"movieId\": 5,\r\n    \"rating\": 5,\r\n    \"viewPercentage\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ratings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratings/history?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratings",
+						"history"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "historyType",
+							"value": "VIEW_PERCENTAGE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "biography",
+							"disabled": true
+						},
+						{
+							"key": "minRating",
+							"value": "3",
+							"disabled": true
+						},
+						{
+							"key": "maxRating",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/search?title=king lion gump",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"search"
+					],
+					"query": [
+						{
+							"key": "genres",
+							"value": "Comedy",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "Forrest Gump",
+							"disabled": true
+						},
+						{
+							"key": "genres",
+							"value": "Drama",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "king lion gump"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecommendMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movies/recommended?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movies",
+						"recommended"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
