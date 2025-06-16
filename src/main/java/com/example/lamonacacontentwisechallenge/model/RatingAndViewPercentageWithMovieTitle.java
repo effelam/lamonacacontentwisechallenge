@@ -9,6 +9,8 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Setter
 @NoArgsConstructor
 public class RatingAndViewPercentageWithMovieTitle {
+    @Field("movie_id")
+    private int movieId;
     private String movieTitle;
     private int rating;
     @Field("view_percentage")

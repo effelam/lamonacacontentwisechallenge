@@ -53,7 +53,7 @@ public class RatingRepository {
                 .as("movieDetails"));
 
         aggregationOperations.add(Aggregation.project()
-                .andInclude("rating", "view_percentage")
+                .andInclude("rating", "view_percentage", "movie_id")
                 .and(ArrayOperators.arrayOf("movieDetails.title").elementAt(0)).as("movieTitle"));
 
         Aggregation aggregation = Aggregation.newAggregation(aggregationOperations);
