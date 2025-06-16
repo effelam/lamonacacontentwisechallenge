@@ -43,7 +43,6 @@ public class MovieRepository {
                 mongoTemplate.aggregate(aggregation, "movies", SearchMovie.class);
 
         return results.getMappedResults();
-
     }
 
     public List<SearchMovie> findMoviesByGenreOrAverageRating(String genre, Integer minRating, Integer maxRating) {
@@ -136,6 +135,7 @@ public class MovieRepository {
 
         aggregationOperations.add(Aggregation.unwind("movieRatings", true));
         aggregationOperations.add(Aggregation.group("_id")
+                .first("movie_id").as("movieId")
                 .first("title").as("title")
                 .first("genres").as("genres")
                 .avg("movieRatings.rating").as("averageRating")

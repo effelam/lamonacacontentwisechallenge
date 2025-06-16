@@ -15,10 +15,10 @@ public class Rating {
     @Id
     private String id;
     @Field("user_id")
-    private String userId;
+    private int userId;
     @Field("movie_id")
-    private String movieId;
-    private int rating;
+    private int movieId;
+    private Integer rating;
     @Field("view_percentage")
-    private int viewPercentage;
+    private Integer viewPercentage;
 }

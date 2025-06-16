@@ -10,6 +10,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class SearchMovie {
+    private int movieId;
     private String title;
     private List<String> genres;
     private Double averageRating;

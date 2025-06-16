@@ -15,6 +15,6 @@ public class User {
     @Id
     private String id;
     @Field("user_id")
-    private String userId;
+    private int userId;
     private String username;
 }
